@@ -29,7 +29,9 @@ To recompile the plugin (Windows):
 2. ```bash
    RunUAT.bat BuildPlugin -Plugin="Path\to\plugin\PBCharacterMovement.uplugin" -Package="Path\to\compiled\plugin" -targetplatforms=Win64
    ```
+OR
 
+1. Run `build-plugin.bat` (Windows only)
 
 
 ## Redistribution note
