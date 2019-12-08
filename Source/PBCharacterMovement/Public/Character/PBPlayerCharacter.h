@@ -60,6 +60,9 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "PB Player|Gameplay")
 	bool bAutoBunnyhop;
 
+	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"), Category = "PB Player|Gameplay")
+	bool bBunnyhopEnabled;
+
 	/** Move step sounds by physical surface */
 	UPROPERTY(EditDefaultsOnly, meta = (AllowPrivateAccess = "true"), Category = "PB Player|Sounds")
 	TMap<TEnumAsByte<EPhysicalSurface>, TSubclassOf<UPBMoveStepSound>> MoveStepSounds;
@@ -115,9 +118,17 @@ public:
 	{
 		return bAutoBunnyhop;
 	};
+	UFUNCTION(Category = "PB Getters", BlueprintPure) FORCEINLINE bool GetBunnyhopEnabled() const
+	{
+		return bBunnyhopEnabled;
+	};
 	UFUNCTION(Category = "PB Setters", BlueprintCallable) void SetAutoBunnyhop(bool val)
 	{
 		bAutoBunnyhop = val;
+	};
+	UFUNCTION(Category = "PB Setters", BlueprintCallable) void SetBunnyhopEnabled(bool val)
+	{
+		bBunnyhopEnabled = val;
 	};
 	UFUNCTION(Category = "PB Getters", BlueprintPure) FORCEINLINE UPBPlayerMovement* GetMovementPtr() const
 	{

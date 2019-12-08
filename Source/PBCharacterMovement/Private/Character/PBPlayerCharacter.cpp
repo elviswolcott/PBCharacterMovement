@@ -131,7 +131,7 @@ void APBPlayerCharacter::OnJumped_Implementation()
 		// Boost our velocity
 		FVector JumpBoostedVel = GetMovementComponent()->Velocity + Facing * SpeedAddition;
 		float JumpBoostedSizeSq = JumpBoostedVel.SizeSquared2D();
-		if (CVarBunnyhop->GetInt() != 0)
+		if (CVarBunnyhop->GetInt() != 0 || bBunnyhopEnabled)
 		{
 			FVector JumpBoostedUnclampVel = GetMovementComponent()->Velocity + Facing * SpeedAdditionNoClamp;
 			float JumpBoostedUnclampSizeSq = JumpBoostedUnclampVel.SizeSquared2D();
