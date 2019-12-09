@@ -81,6 +81,7 @@ protected:
 
 	/** If in the crouching transition */
 	bool bInCrouch;
+	bool IsSprinting;
 
 	/** The PB player character */
 	class APBPlayerCharacter* PBCharacter;

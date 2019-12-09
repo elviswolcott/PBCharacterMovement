@@ -20,6 +20,10 @@ class PBCHARACTERMOVEMENT_API APBPlayerCharacter : public ACharacter
 public:
 	virtual void ClearJumpInput(float DeltaTime) override;
 	virtual void StopJumping() override;
+	UFUNCTION(BlueprintCallable, Category=Character)
+	virtual void StopSprinting();
+	UFUNCTION(BlueprintCallable, Category=Character)
+	virtual void Sprint();
 	virtual void OnJumped_Implementation() override;
 	virtual bool CanJumpInternal_Implementation() const override;
 

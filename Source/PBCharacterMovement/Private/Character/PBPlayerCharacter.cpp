@@ -89,6 +89,16 @@ void APBPlayerCharacter::StopJumping()
 	}
 }
 
+void APBPlayerCharacter::StopSprinting()
+{
+	bIsSprinting = false;
+}
+
+void APBPlayerCharacter::Sprint()
+{
+	bIsSprinting = true;
+}
+
 void APBPlayerCharacter::OnJumped_Implementation()
 {
 	LastJumpTime = GetWorld()->GetTimeSeconds();

@@ -24,3 +24,6 @@ robocopy "./Build/Binaries" "./Binaries" /s /e
 
 :: delete the temp directory
 rd /s /q "./Build"
+
+:: keep open to view results
+pause
